@@ -1,0 +1,11 @@
+<ul>
+{{#each model as |rental|}}
+    <li>
+        {{#link-to "rental" rental.id}}
+            {{rental.title}}
+        {{/link-to}}
+    </li>
+{{/each}}
+</ul>
+
+{{outlet}}

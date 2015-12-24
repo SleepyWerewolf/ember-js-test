@@ -1,9 +1,10 @@
+{{#link-to "rentals"}}<p>Return to rentals page</p>{{/link-to}}
 <h2>{{rental.title}}</h2>
 <p>Owner: {{rental.owner}}</p>
 <p>Type: {{rental.type}}</p>
 <p>Location: {{rental.city}}</p>
 <p>Number of bedrooms: {{rental.bedrooms}}</p>
-<button {{action "toggleImage"}}>Toggle Image</button>
+<button {{action "toggleImage"}}>Toggle Image</button><br>
 {{#if isImageShowing}}
     <img src={{rental.image}} alt={{rental.type}}>
 {{/if}}
