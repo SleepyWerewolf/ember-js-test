@@ -10,12 +10,12 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      }
+      },
     },
 
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+      applicationId: '4KT6FylVSpZPImvA6QI9873CGWOEhxsK0tr85Esa',
+      restApiId: '0XplWQw3CUo6nCX07J9OkJkGRdUOUzbvN21hSecd'
     }
   };
 
