@@ -1,7 +1,8 @@
 # Super-rentals
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+The purpose of this application was to test out using the Ember CLI as well as integrate it with Parse for a backend. The functionality is incredibly simple, allowing users to create, view, and update rentals, testing out the basic GET, POST, and PUT endpoints of the Parse backend.
 
 ## Prerequisites
 
