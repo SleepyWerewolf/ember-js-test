@@ -1,43 +1,49 @@
-<form class="form-horizontal" role="form">
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="email">Title:</label>
-    <div class="col-sm-10">
-      {{input type="text" class="form-control" value=title}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Title:</label>
+          <div class="col-sm-10">
+            {{input type="text" class="form-control" value=title}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">Owner:</label>
+          <div class="col-sm-10"> 
+            {{input type="text" class="form-control" value=owner}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">City:</label>
+          <div class="col-sm-10"> 
+            {{input type="text" class="form-control" value=city}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">Type:</label>
+          <div class="col-sm-10"> 
+            {{input type="text" class="form-control" value=type}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">Image Link:</label>
+          <div class="col-sm-10"> 
+            {{input type="text" class="form-control" value=image}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">Number of Bedrooms:</label>
+          <div class="col-sm-10"> 
+            {{input type="text" class="form-control" value=bedrooms}}
+          </div>
+        </div>
+        <div class="form-group"> 
+          <div class="col-sm-offset-2 col-sm-10">
+            <button {{action "createRental"}} class="btn btn-default">Create New Rental</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Owner:</label>
-    <div class="col-sm-10"> 
-      {{input type="text" class="form-control" value=owner}}
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">City:</label>
-    <div class="col-sm-10"> 
-      {{input type="text" class="form-control" value=city}}
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Type:</label>
-    <div class="col-sm-10"> 
-      {{input type="text" class="form-control" value=type}}
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Image Link:</label>
-    <div class="col-sm-10"> 
-      {{input type="text" class="form-control" value=image}}
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Number of Bedrooms:</label>
-    <div class="col-sm-10"> 
-      {{input type="text" class="form-control" value=bedrooms}}
-    </div>
-  </div>
-  <div class="form-group"> 
-    <div class="col-sm-offset-2 col-sm-10">
-      <button {{action "createRental"}} class="btn btn-default">Create New Rental</button>
-    </div>
-  </div>
-</form>
+</div>

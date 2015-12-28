@@ -1,15 +1,5 @@
 import Ember from 'ember';
 
-
-var test = {
-    title: 'Happy Fun Place',
-    owner: 'Mr. Happy',
-    city: 'New York',
-    type: 'Alleyway',
-    image: 'http://untappedcities.com/wp-content/uploads/2014/05/Cortlandt-Alley-Chinatown-Secrets-NYC.jpg',
-    bedrooms: 0
-};
-
 export default Ember.Component.extend({
     actions: {
         createRental(params) {

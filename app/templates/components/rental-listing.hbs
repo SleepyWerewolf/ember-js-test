@@ -1,10 +1,35 @@
 {{#link-to "rentals"}}<p>Return to rentals page</p>{{/link-to}}
+<button {{action "toggleEditMode"}}>
+    {{#if isEditMode}}
+        Show Mode
+    {{else}}
+        Edit Mode
+    {{/if}}
+</button>
+
 <h2>{{rental.title}}</h2>
-<p>Owner: {{rental.owner}}</p>
-<p>Type: {{rental.type}}</p>
-<p>Location: {{rental.city}}</p>
-<p>Number of bedrooms: {{rental.bedrooms}}</p>
-<button {{action "toggleImage"}}>Toggle Image</button><br>
-{{#if isImageShowing}}
-    <img src={{rental.image}} alt={{rental.type}}>
+{{#if isEditMode}}
+    <p>Owner: {{input type="text" value=rental.owner}}</p>
+    <p>Type: {{input type="text" value=rental.type}}</p>
+    <p>Location: {{input type="text" value=rental.city}}</p>
+    <p>Number of bedrooms: {{input type="number" value=rental.bedrooms}}</p>
+    <p>Image Link: {{input type="text" value=rental.image}}</p>
+    <button {{action "updateRental"}}>Update Rental</button>
+    <p>{{successMessage}}</p>
+
+    <!-- Error message -->
+    <div class="alert alert-danger" role="alert">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      <span class="sr-only">Error:</span>
+      {{errorMessage}}
+    </div>
+{{else}}
+    <p>Owner: {{rental.owner}}</p>
+    <p>Type: {{rental.type}}</p>
+    <p>Location: {{rental.city}}</p>
+    <p>Number of bedrooms: {{rental.bedrooms}}</p>
+    <button {{action "toggleImage"}}>Toggle Image</button><br>
+    {{#if isImageShowing}}
+        <img src={{rental.image}} alt={{rental.type}}>
+    {{/if}}
 {{/if}}
